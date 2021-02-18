@@ -1,0 +1,35 @@
+dev:
+  vpc:
+    securityGroupIds:
+      - sg-99999999
+      - sg-99999999
+    subnetIds:
+      - subnet-999999
+      - subnet-999999
+
+test:
+  vpc:
+    securityGroupIds:
+      - sg-99999999
+      - sg-99999999
+    subnetIds:
+      - subnet-999999
+      - subnet-999999
+
+prod:
+  vpc:
+    securityGroupIds:
+      - sg-99999999
+      - sg-99999999
+    subnetIds:
+      - subnet-999999
+      - subnet-999999
+
+domain:
+  "domain.com.br"
+certificate:
+  "*.domain.com.br"
+role:
+  arn:aws:iam::XXXXXXXXXXXXX:role/lambda_vpc_execution
+deploymentBucket:
+  serverless-deploys-packages

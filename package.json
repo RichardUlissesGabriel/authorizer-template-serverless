@@ -1,0 +1,21 @@
+{
+  "name": "authorizer-template-serverless",
+  "version": "1.0.0",
+  "description": "template para a criação de authorizer",
+  "main": "src/handler.js",
+  "author": "Richard Ulisses Gabriel",
+  "license": "MIT",
+  "scripts": { 
+    "deploy:dev": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=dev -v",
+    "deploy:teste": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=test -v",
+    "deploy:homolog": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=homolog -v",
+    "deploy:prod": "npm run generate-schemas && SLS_DEBUG=* sls deploy --stage=prod -v",
+    "deploy:master": "npm run deploy:prod",
+    "deploy": "npm run deploy:dev"
+  },
+  "devDependencies": {
+    "serverless-aws-resource-names": "^0.1.2",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless": "1.61.0"
+  }
+}
